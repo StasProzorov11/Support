@@ -2,6 +2,11 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
+import os
+from django.conf import settings
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "your_project.settings")
+settings.configure()
 
 from issues.models import Issue
 
