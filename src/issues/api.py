@@ -19,4 +19,3 @@ def list_issues(request):
     issues = Issue.objects.all()
     data = [{'title': issue.title, 'description': issue.description} for issue in issues]
     return JsonResponse(data, safe=False)
-

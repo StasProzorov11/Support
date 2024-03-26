@@ -1,6 +1,7 @@
-from django.apps import AppConfig
+from django.urls import path
+from .views import create_issue, list_issues
 
-
-class IssuesConfig(AppConfig):
-    default_auto_field = "django.db.models.BigAutoField"
-    name = "issues"
+urlpatterns = [
+    path('create/', create_issue, name='create_issue'),
+    path('', list_issues, name='list_issues'),
+]
